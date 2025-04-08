@@ -1,0 +1,684 @@
+/* Reset base */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Red Hat Display", sans-serif;
+  background-color: #ffffff;
+  color: #0141c7;
+  line-height: 1.6;
+}
+
+/* Header fix */
+.header {
+  background-color: #ffffff;
+  padding: 10px 48px 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 2px solid #e0e0e0;
+  margin-top: 20px;
+  gap: 60px;
+}
+
+.nav {
+  display: flex;
+  gap: 35px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #0141c7;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #c6d62d;
+}
+
+.loginGroup {
+  display: flex;
+  align-items: end;
+  gap: 14px;
+  margin-left: auto; /* Isso joga o grupo pro lado direito */
+}
+
+.loginGroup .login {
+  background-color: #c6d62d;
+  padding: 10px 20px;
+  border-radius: 9999px;
+  color: #0141c7;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+  align-items: end;
+}
+
+.loginGroup .login:hover {
+  background-color: #b5c420;
+}
+
+/* Main content */
+.main {
+  background-color: #c6d62d;
+  display: flex;
+  align-items: stretch; /* O segredo está aqui */
+  justify-content: space-between;
+  gap: 20px;
+  color: #0141c7;
+  height: auto; /* deixa a altura ser definida pelo conteúdo */
+}
+
+.hero {
+  padding: 100px 48px;
+  max-width: 600px;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 5rem;
+  margin: 0;
+  color: #0141c7;
+}
+
+.hero h2 {
+  font-size: 2.3rem;
+  margin-top: 10px;
+  color: #0141c7;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin: 24px 0;
+  color: #0141c7;
+}
+
+/* CTA Button */
+.cta-button {
+  background-color: #0141c7;
+  color: #ffffff;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #012e9e;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 24px;
+  background-color: #f5f5f5;
+  font-size: 0.9rem;
+  color: #666;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .nav,
+  .loginGroup {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .main {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image {
+    display: none;
+  }
+
+  .main-image {
+    display: none;
+  }
+}
+
+.logo img {
+  height: 25px; /* Tamanho pequeno, mas visível */
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05); /* Efeito sutil ao passar o mouse */
+}
+
+.main-image {
+  height: 100%;
+  display: flex;
+  align-items: stretch; /* faz ela crescer igual ao container */
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.main-image img {
+  height: 600px;
+  width: auto; /* mantém proporção */
+  max-height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+  padding-right: 115px;
+}
+
+.plans {
+  padding: 60px 48px;
+  background-color: #ffffff;
+  color: #0141c7;
+  text-align: center;
+}
+
+.plans h2 {
+  font-size: 2.8rem;
+  margin-bottom: 50px;
+  font-family: "Bebas Neue", cursive;
+}
+
+.plan-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* Estilo base dos cards */
+.plan {
+  border-radius: 20px;
+  padding: 40px;
+  width: 320px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  color: #ffffff;
+}
+
+.plan:hover {
+  transform: scale(1.03);
+}
+
+.plan h3 {
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+  font-family: "Bebas Neue", cursive;
+}
+
+.plan p {
+  font-size: 1rem;
+  margin-bottom: 24px;
+}
+
+.plan ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.plan ul li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 24px;
+}
+
+.plan ul li::before {
+  content: "✔️";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  border-radius: 16px;
+  padding: 16px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Starter - Azul da identidade */
+.plan.starter .price {
+  background-color: #0141c7;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+/* Edukation - Pretinho chique com dourado mental */
+.plan.edukation .price {
+  background-color: #000000;
+  color: #c6d62d;
+  border: 2px solid #c6d62d;
+}
+
+/* Cores específicas */
+.plan.starter {
+  background-color: #0141c7; /* Azul Edukar */
+  border: 3px solid #c6d62d;
+}
+
+.plan.starter h3,
+.plan.starter p,
+.plan.starter ul li,
+.plan.starter .price {
+  color: #ffffff;
+}
+
+.plan.edukation {
+  background-color: #000000; /* Pretão luxo */
+  border: 3px solid #c6d62d;
+}
+
+.plan.edukation h3,
+.plan.edukation p,
+.plan.edukation ul li,
+.plan.edukation .price {
+  color: #ffffff;
+}
+
+.badge {
+  display: inline-block;
+  background-color: #c6d62d;
+  color: #000000;
+  font-weight: bold;
+  font-size: 0.85rem;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  z-index: 10;
+  box-shadow: 0 0 10px rgba(198, 214, 45, 0.5);
+  animation: pulse 2.5s infinite ease-in-out;
+}
+
+.plan.edukation {
+  position: relative;
+}
+
+/* Animação de brilho */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 10px rgba(198, 214, 45, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(198, 214, 45, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(198, 214, 45, 0.5);
+  }
+}
+
+.price-edukation {
+  box-shadow: 0 0 20px rgba(198, 214, 45, 0.4),
+    inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.features-reveal {
+  padding: 4rem 2rem;
+  background-color: #0141c7;
+  text-align: center;
+}
+
+.reveal-button {
+  background-color: #c6d62d; /* Fundo transparente para mais leveza */
+  color: #0141c7; /* Cor do texto azul */
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border: 2px solid #c6d62d; /* Borda fina do verde */
+  border-radius: 9999px; /* Bordas arredondadas */
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease; /* Transições suaves */
+  text-transform: uppercase; /* Texto em caixa alta */
+  letter-spacing: 1px; /* Espaçamento entre as letras */
+}
+
+.reveal-button:hover {
+  background-color: #c6d62d; /* Cor de fundo verde no hover */
+  color: #fff; /* Texto branco no hover */
+  transform: scale(1.05); /* Efeito de aumento suave */
+  border-color: #0141c7; /* A borda fica azul no hover */
+}
+
+.reveal-button:focus {
+  outline: none; /* Remove o contorno padrão */
+  border-color: #0141c7; /* Mantém a borda azul no foco */
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.features-grid.hidden {
+  display: none;
+  opacity: 0;
+}
+
+.feature-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  position: relative;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+  font-size: 2rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+/* Cores por categoria */
+.icon.academic {
+  color: #0141c7;
+} /* Azul */
+.icon.communication {
+  color: #c6d62d;
+} /* Verde claro */
+.icon.ai {
+  color: #8c4eff;
+} /* Roxo */
+.icon.game {
+  color: #ff7c00;
+} /* Laranja */
+.icon.library {
+  color: #ff3c38;
+} /* Vermelho */
+.icon.uau {
+  color: #000000;
+} /* Preto glam */
+
+.feature-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #555;
+}
+
+.about-edukar {
+  background: #ffffff; /* Gradiente de azul e roxo */
+  color: #0141c7; /* Texto branco */
+  padding: 6rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.about-content h2 {
+  font-size: 3rem; /* Tamanho maior para um título marcante */
+  font-weight: 800; /* Peso mais forte para destacar */
+  text-transform: uppercase;
+  color: #c6d62d; /* Verde da identidade para o título */
+  letter-spacing: 2px; /* Aumento do espaçamento entre as letras para dar mais impacto */
+  margin-bottom: 2rem;
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #0141c7;
+  max-width: 700px; /* Limita a largura do texto para não ficar esticado */
+  margin: 0 auto; /* Centraliza o parágrafo */
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.contact-section {
+  background-color: #ffffff;
+  padding: 6rem 2rem;
+  text-align: center;
+  color: #222;
+}
+
+.contact-container h2 {
+  font-size: 2.5rem;
+  color: #0141c7;
+  margin-bottom: 1rem;
+}
+
+.contact-container p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.form-group label {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 95%;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #0141c7;
+  box-shadow: 0 0 5px rgba(1, 65, 199, 0.5);
+}
+
+.submit-btn {
+  background-color: #c6d62d;
+  color: #0141c7;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+}
+
+.submit-btn:hover {
+  background-color: #a0c327;
+  transform: scale(1.05);
+}
+
+.form-feedback {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #28a745;
+  visibility: hidden; /* Inicialmente invisível */
+  transition: opacity 0.3s ease;
+}
+
+.contact-form .error {
+  color: #dc3545;
+}
+
+/* Estilo para os inputs */
+input,
+textarea {
+  width: 100%;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+/* Estilo quando o campo estiver em foco */
+input:focus,
+textarea:focus {
+  border-color: #0141c7; /* Cor azul da identidade */
+  box-shadow: 0 0 8px rgba(1, 65, 199, 0.4);
+  outline: none;
+  background-color: #fff;
+}
+
+/* Placeholder dos inputs com a cor do texto em cinza claro */
+input::placeholder,
+textarea::placeholder {
+  color: #aaa;
+}
+
+/* Para o input de e-mail, vamos dar um toque mais especial */
+input[type="email"] {
+  border-color: #c6d62d; /* Verde da identidade */
+}
+
+input[type="email"]:focus {
+  border-color: #0141c7;
+  box-shadow: 0 0 8px rgba(1, 65, 199, 0.4);
+}
+
+/* Estilo do botão de envio */
+button[type="submit"] {
+  background-color: #0141c7;
+  color: #fff;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button[type="submit"]:hover {
+  background-color: #012e99;
+  transform: scale(1.03);
+}
+
+/* Estilo do feedback de erro ou sucesso */
+#formFeedback {
+  font-size: 0.9rem;
+  color: #fff;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s ease;
+}
+
+#formFeedback.error {
+  background-color: #ff3c38; /* Vermelho para erro */
+}
+
+#formFeedback.success {
+  background-color: #c6d62d; /* Verde para sucesso */
+}
+
+.moving-objects {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none; /* Para não interferir na interação do usuário com o conteúdo */
+  z-index: 1;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(1, 65, 199, 0.4); /* Cor do círculo */
+  animation: moveCircle 10s infinite ease-in-out;
+}
+
+.circle-1 {
+  width: 100px;
+  height: 100px;
+  top: 10%;
+  left: 20%;
+}
+
+.circle-2 {
+  width: 150px;
+  height: 150px;
+  top: 40%;
+  left: 60%;
+}
+
+.circle-3 {
+  width: 120px;
+  height: 120px;
+  top: 70%;
+  left: 80%;
+}
+
+/* Animação dos círculos movendo-se aleatoriamente */
+@keyframes moveCircle {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(150px, 150px);
+  }
+  50% {
+    transform: translate(-100px, -100px);
+  }
+  75% {
+    transform: translate(200px, -200px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-tema="claro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../src/logo_favicon.ico"
+      type="image/x-icon"
+    />
+    <title>Primeira Entrada - Edukar</title>
+    <link rel="stylesheet" href="../styles/primeira.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="slides" id="slides">
+        <!-- Escolha de Tema -->
+        <section class="slide ativo">
+          <h2>Escolha seu estilo 🌗</h2>
+          <div class="opcoes-tema">
+            <button class="theme-btn claro" data-tema="claro">🌞 Claro</button>
+            <button class="theme-btn escuro" data-tema="escuro">
+              🌙 Escuro
+            </button>
+          </div>
+        </section>
+
+        <!-- Idade -->
+        <section class="slide">
+          <h2>Quantos anos você tem?</h2>
+          <input type="number" name="idade" placeholder="Digite sua idade" />
+          <button class="next-btn">Próximo</button>
+        </section>
+
+        <!-- Faculdade -->
+        <section class="slide">
+          <h2>Qual faculdade você quer fazer?</h2>
+          <input
+            type="text"
+            name="faculdade"
+            placeholder="Ex: Engenharia de Software"
+          />
+          <button class="next-btn">Próximo</button>
+        </section>
+
+        <!-- Hobby -->
+        <section class="slide">
+          <h2>Qual é o seu hobby favorito? 🎨</h2>
+          <input
+            type="text"
+            name="hobby"
+            placeholder="Ex: Tocar violão, desenhar..."
+          />
+          <button class="next-btn">Finalizar</button>
+        </section>
+
+        <!-- Carregando -->
+        <section class="slide carregando">
+          <h2>Preparando sua experiência... 🎒✨</h2>
+          <div class="loader"></div>
+          <p class="mensagem">Aguenta firme, só um segundo!</p>
+        </section>
+      </div>
+    </div>
+    <script src="../engines/primeira.js"></script>
+  </body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edukar</title>
+    <link
+      rel="shortcut icon"
+      href="../src/logo_favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/landing.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img src="../src/Logo Azul.png" alt="Logo Edukar" />
+      </div>
+
+      <nav class="nav">
+        <a href="../Landing Page/index.html">Início</a>
+        <a href="#planos">Planos</a>
+        <a href="#sobre">Sobre</a>
+      </nav>
+      <div class="loginGroup">
+        <a class="login" href="../Logins/login_aluno.html">Sou Aluno</a>
+        <a class="login" href="../Logins/login_escola.html">Sou Escola</a>
+        <a class="login" href="../Logins/login_responsável.html"
+          >Sou Responsável</a
+        >
+      </div>
+    </header>
+
+    <main class="main" id="inicio">
+      <section class="hero">
+        <h2>A inteligência que transforma a educação</h2>
+        <p>
+          Com tecnologia, gamificação e uma IA que guia o aprendizado, a Edukar
+          revoluciona o ensino para escolas e alunos.
+        </p>
+        <a class="cta-button" href="#funcionalidades">Conheça a plataforma</a>
+      </section>
+      <div class="main-image">
+        <img src="../src/photo_home.png" alt="Ilustração de estudante" />
+      </div>
+    </main>
+
+    <section class="plans">
+      <h2>Escolha o plano ideal para sua escola</h2>
+      <div class="plan-cards">
+        <div class="plan starter">
+          <h3>Plano Starter</h3>
+          <p>
+            Essencial, poderoso e completo para instituições que desejam
+            transformar.
+          </p>
+          <ul>
+            <li>IA Eduk sempre presente</li>
+            <li>Dashboards inteligentes</li>
+            <li>Gamificação com recompensas</li>
+            <li>Correção automática de provas</li>
+            <li>Comunicação com responsáveis</li>
+            <li>Integração com Google Meet</li>
+          </ul>
+          <p class="price">R$ 89/mês</p>
+        </div>
+
+        <div class="plan edukation">
+          <span class="badge">Mais Completo</span>
+          <h3>Plano Edukation</h3>
+          <p>
+            A educação do futuro começa aqui. Realidade aumentada na palma da
+            mão.
+          </p>
+          <ul>
+            <li>Tudo do Plano Starter</li>
+            <li>Experiências em Realidade Aumentada</li>
+            <li>Laboratórios virtuais 3D</li>
+            <li>Exploração imersiva de conteúdos</li>
+            <li>Suporte técnico especializado</li>
+            <li>Eduk sempre ao seu dispor</li>
+          </ul>
+          <p class="price price-edukation">R$ 149/mês</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="features-reveal">
+      <button id="revealFeaturesBtn" class="reveal-button">
+        Descobrir os poderes do Edukar
+      </button>
+
+      <div id="hiddenFeatures" class="features-grid hidden">
+        <!-- Acadêmico -->
+        <div class="feature-card">
+          <span class="icon academic">📚</span>
+          <h3>Boletim Escolar Digital</h3>
+          <p>
+            Acompanhe o desempenho do aluno com visual limpo e exportação em
+            PDF.
+          </p>
+        </div>
+        <div class="feature-card">
+          <span class="icon academic">🧮</span>
+          <h3>Lançamento de Notas</h3>
+          <p>
+            Notas por prova, atividade e peso personalizado para cada avaliação.
+          </p>
+        </div>
+        <div class="feature-card">
+          <span class="icon academic">✅</span>
+          <h3>Controle de Frequência</h3>
+          <p>Registros diários com visão em tempo real para responsáveis.</p>
+        </div>
+        <div class="feature-card">
+          <span class="icon academic">📆</span>
+          <h3>Calendário Escolar</h3>
+          <p>Eventos, provas, feriados com notificações inteligentes.</p>
+        </div>
+        <div class="feature-card">
+          <span class="icon academic">✍️</span>
+          <h3>Assinatura Digital</h3>
+          <p>Documentos oficiais assinados direto na plataforma.</p>
+        </div>
+
+        <!-- Comunicação -->
+        <div class="feature-card">
+          <span class="icon communication">📢</span>
+          <h3>Comunicados e Recados</h3>
+          <p>Mensagens com confirmação de leitura por responsáveis.</p>
+        </div>
+        <div class="feature-card">
+          <span class="icon communication">💬</span>
+          <h3>Chat com Professores e Secretaria</h3>
+          <p>Canal direto e funcional para comunicação com a escola.</p>
+        </div>
+        <div class="feature-card">
+          <span class="icon communication">🎓</span>
+          <h3>Perfil do Responsável</h3>
+          <p>
+            Acesso a múltiplos filhos, notificações personalizadas e interação
+            fácil.
+          </p>
+        </div>
+
+        <!-- IA & Extras -->
+        <div class="feature-card">
+          <span class="icon ai">🤖</span>
+          <h3>Mentoria por IA (Eduk)</h3>
+          <p>
+            Recomenda conteúdos, tira dúvidas e guia alunos no caminho do saber.
+          </p>
+        </div>
+        <div class="feature-card">
+          <span class="icon ai">🔍</span>
+          <h3>Correção Automática por IA</h3>
+          <p>Provas corrigidas em segundos, com revisão manual opcional.</p>
+        </div>
+
+        <!-- Gamificação -->
+        <div class="feature-card">
+          <span class="icon game">🕹️</span>
+          <h3>Gamificação Total</h3>
+          <p>XP, rankings, medalhas, desafios e loja mágica de recompensas.</p>
+        </div>
+        <div class="feature-card">
+          <span class="icon game">🧩</span>
+          <h3>Desafios e Hackathons</h3>
+          <p>Quizzes, eventos e competições entre turmas.</p>
+        </div>
+
+        <!-- Biblioteca & APIs -->
+        <div class="feature-card">
+          <span class="icon library">📖</span>
+          <h3>Biblioteca Virtual</h3>
+          <p>Catálogo digital, empréstimos e leituras integradas.</p>
+        </div>
+        <div class="feature-card">
+          <span class="icon library">🔗</span>
+          <h3>APIs Educacionais Integradas</h3>
+          <p>Conexão com Khan Academy, Udemy e YouTube Educacional.</p>
+        </div>
+
+        <!-- Extras UAU -->
+        <div class="feature-card">
+          <span class="icon uau">🎥</span>
+          <h3>Google Meet Integrado</h3>
+          <p>Aulas ao vivo com um clique, direto na plataforma.</p>
+        </div>
+        <div class="feature-card">
+          <span class="icon uau">🧠</span>
+          <h3>Realidade Aumentada</h3>
+          <p>Experiências imersivas 3D direto na sala de aula.</p>
+        </div>
+        <div class="feature-card">
+          <span class="icon uau">📲</span>
+          <h3>Notificações Push</h3>
+          <p>Alertas importantes direto no celular dos alunos e pais.</p>
+        </div>
+        <div class="feature-card">
+          <span class="icon uau">🏆</span>
+          <h3>Campeonatos entre Turmas</h3>
+          <p>Eventos e jogos que tornam o aprendizado inesquecível.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-edukar">
+      <div class="about-content">
+        <h2>Sobre o Edukar</h2>
+        <p>
+          O Edukar é mais que um sistema escolar. É um convite para redescobrir
+          o aprendizado. Para os professores, é ferramenta. Para os alunos, é
+          ponte. Para as instituições, é inovação viva.
+        </p>
+        <p>
+          Desenvolvido com tecnologia de ponta, IA personalizada, e o
+          compromisso de transformar cada aula em uma experiência. Edukar não é
+          apenas digital. É humano, é presente, é futuro.
+        </p>
+      </div>
+      <div class="moving-objects">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="contact-container">
+        <h2>Entre em Contato</h2>
+        <p>
+          Tem dúvidas ou quer saber mais sobre o Edukar? Estamos aqui para
+          ajudar. Preencha o formulário abaixo e entraremos em contato em breve!
+        </p>
+        <form id="contactForm" class="contact-form">
+          <div class="form-group">
+            <label for="name">Seu Nome</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="Digite seu nome"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Seu E-mail</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="Digite seu e-mail"
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Sua Mensagem</label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              placeholder="Escreva sua mensagem aqui..."
+            ></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Enviar Mensagem</button>
+          <p class="form-feedback" id="formFeedback"></p>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© 2025 Edukar. Todos os direitos reservados a Lummi.</p>
+    </footer>
+
+    <script src="../engines/landing.js"></script>
+  </body>
+</html>

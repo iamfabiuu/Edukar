@@ -1,0 +1,115 @@
+/* Estilos Gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+body {
+  background-color: #c6d62d; /* Fundo verde da identidade visual */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden; /* Para não aparecer o scroll */
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+body.fade-out {
+  opacity: 0;
+}
+
+.login-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding-right: 100px;
+}
+
+.logo-container {
+  flex: 1;
+  text-align: left;
+  padding-left: 150px; /* Afastar a logo um pouco da borda esquerda */
+}
+
+.logo-container img {
+  width: 280px; /* Ajuste do tamanho da logo */
+}
+
+.login-box {
+  flex: 1;
+  max-width: 400px;
+  background-color: #0141c7; /* Fundo azul do container de login */
+  border-radius: 15px;
+  padding: 60px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #ffffff; /* Cor branca para o título */
+  margin-bottom: 25px;
+  font-family: "Bebas Neue", cursive;
+  font-size: 60px;
+}
+
+.input-field {
+  margin-bottom: 20px;
+}
+
+.input-field input {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+  border: 2px solid #ffffff; /* Bordas brancas */
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.input-field input:focus {
+  border-color: #1c64ff; /* Laranja para quando o input estiver focado */
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #1c64ff; /* Laranja para o botão */
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: #002c8b; /* Laranja mais forte para o hover */
+  transform: scale(1.05);
+}
+
+/* Footer com os links */
+.login-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.login-footer p {
+  margin: 10px 0;
+}
+
+.login-footer a {
+  text-decoration: none;
+  color: #ffffff; /* Texto branco para os links */
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.login-footer a:hover {
+  color: #ff6f00; /* Cor laranja para o hover nos links */
+}
